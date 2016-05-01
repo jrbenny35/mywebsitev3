@@ -1,0 +1,39 @@
+#content {
+  overflow: hidden;
+}
+
+#content {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 5px;
+}
+
+md-list .md-button.active {
+  background-color: #03a9f4;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+md-list .md-button{
+  padding: 1rem;
+}
+
+md-list .md-button.active:hover{
+  background-color: #78909c; !important;
+}
+
+md-list .md-button:hover{
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+/*Content*/
+
+#content{
+
+}
+
+#contentDiv{
+
+  padding-left: 3em;
+}

@@ -1,0 +1,49 @@
+//
+   Created by root on 9/23/15.
+div#contact
+  h1 Contact me
+  hr
+  h3 Please fill out this contact form below
+  form( name='contactForm' ng-controller="ContactCtrl", role="form" ng-submit="saveContact()")
+    md-content
+      md-card.md-padding
+        md-card-content()
+          md-input-container(style='width: 100%')
+            label Name
+            input( type='text' ng-maxlength='30' ng-minlength='3' md-maxlength='30' name='name' ng-model='contact.name' required)
+            div(ng-messages='contactForm.name.$error' ng-show='contactForm.name.$touched')
+              p(ng-message='required') This is required
+              p(ng-message='maxlength') Name must be less than 30 characters long
+              p(ng-message='minlength') Name must be at least 3 characters long
+          br
+          md-input-container(style='width: 100%')
+            label Email
+            input( minlength='10' maxlength='25' name='email' ng-model='contact.email' ng-pattern='/^.+@.+\..+$/' required)
+            div(ng-messages='contactForm.email.$error' role='alert' ng-show='contactForm.email.$touched')
+              p(ng-message='required') An email address is required
+              p(ng-message-exp="['minlength', 'maxlength', 'pattern']") Invalid email
+          br
+          md-input-container(style='width: 100%')
+            label Message
+            input(type='text' ng-maxlength='300' md-maxlength='300' name='message' ng-model='contact.message' )
+            div(ng-messages='contactForm.message.$error' ng-show='contactForm.message.$touched')
+              p(ng-message='maxlength') Message is limited to 300 characters
+          br
+          md-button.md-raised.md-primary.md-hue-2.hvr-grow(type = "submit" ng-disabled='contactForm.$invalid') Submit
+  br
+  h1 Reach out to me here if you wish
+  hr
+  md-content
+    div(layout-gt-lg='row' layout='column' layout-align-gt-lg='center center' layout-align='center center' layout-margin)
+      div()
+        md-content
+          md-card(style='max-width: 325px; min-width: 325px;').md-padding.md-card-secondary
+            a(href="http://linkedin.com/in/benjaminforehandjr", target="_blank")
+              img(src="images/CBpFkPaz.png", alt="linked in" style='max-height: 150px; width: auto; margin: auto;')
+            p Linked In
+      div()
+        md-content
+          md-card(style='max-width: 325px; min-width: 325px;').md-padding.md-card-secondary
+            a(href="http://github.com/jrbenny35", target="_blank")
+              img(src="images/github-mark@1200x630.png", alt="github img" style='max-height: 150px; width: auto; margin: auto;')
+            p Github

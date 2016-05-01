@@ -1,0 +1,18 @@
+div(flex class='projects-detail-card')
+  h2 Project: {{ projects.title }}
+  md-content.md-padding
+    md-card.md-card
+      img.md-card-image(src="{{projects.image}}", alt="Document image")
+      md-card-content.md-card-content
+        hr
+        h3 Project Title: {{ projects.title }}
+        h4 Detailed Description:
+        p.
+          {{ projects.detailDescription }}
+        br
+        br
+        div
+          span Updated on: {{ projects.updated_On }}
+        br
+        div(layout='row' layout-align='start end')
+          md-button.md-raised.md-primary.md-hue-2.hvr-grow(href="{{ projects.link }}", role= "button" target="_blank") View
