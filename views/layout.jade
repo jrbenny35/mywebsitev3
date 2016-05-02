@@ -25,9 +25,8 @@ html
       md-button(aria-label='Show User List', ng-controller='RightNavCtrl', ng-click='toggleSidenav()' style='padding-top: 10px')
         ng-md-icon(icon="people" style="fill: white" size="30" hide-gt-lg='')
     div(layout='row' )
-      md-toolbar.md-tall.md-whiteframe-z1(style='max-width: 150px;' hide-sm='' hide-md='' hide-lg='')
       div#layout(layout='row' flex)
-        md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id='left', md-is-locked-open="$mdMedia('gt-md')" layout='column')
+        md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id='left', layout='column')
           md-toolbar.md-whiteframe-z1.body-toolbar.md-toolbar
             span(flex='')
           md-list(ng-controller="LeftCtrl")
@@ -63,7 +62,6 @@ html
                 md-content.md-padding
                   p Google Plus
                   .gplus2
-      md-toolbar.md-tall.md-whiteframe-z1(style='max-width: 150px;' hide-sm='' hide-md='' hide-lg='')
 
 
     script(type="text/javascript" src='https://code.jquery.com/jquery-2.1.4.min.js')
