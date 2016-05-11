@@ -21,3 +21,5 @@ public/javascripts/deploy/*
 public/javascripts/vendor/*
 !package.json
 orbit-root
+bower-components/
+bin/
