@@ -1,41 +1,42 @@
 div#main(layout='column')
-  div#bigCallout(layout='column' layout-align='center center')
+  div#bigCallout.teal(layout='column' layout-align='center center')
     md-content.callout-content(layout-padding)
+      img(src='images/mylogo.png', alt='My Brand' style='background-color: white')
       h1 Benjamin Forehand Jr
-        //img(src='images/mylogo2.png', alt='My Brand' style='background-color: rgba(#000, .5);')
       p - Web Development - Web Design - Quality Assurance -
       md-button.md-raised.md-primary.hvr-grow(ui-sref='about') About Me
-  div(layout-gt-lg='row' layout-align='center center' layout-margin)
-    div(flex class='main-card')
-      md-content
-        md-card.md-padding
-          img.md-card-image-alt(src='images/resumeLogo.png')
-          md-card-content.md-card-content
-            hr
-            h2 Resume
-            p Take a look at the awesomeness that is my resume! A view and download link is available as well.
-          div.navButton(layout='row', class='', layout-align='end end')
-            md-button.md-raised.md-primary.hvr-grow(ui-sref='resume') Resume
-    div(flex class='main-card')
-      md-content
-        md-card.md-padding
-          img.md-card-image(src='images/contactImg.png')
-          md-card-content.md-card-content
-            hr
-            h2
-              | Stay In touch
-            p.
-              A short form requiring just your name and email address and a short message for me to contact you regarding whatever you wish.
-          div.navButton(layout='row', class='', layout-align='end end')
-            md-button.md-raised.md-primary.hvr-grow(ui-sref='contact') Contact
-    div(flex class='main-card')
-      md-content
-        md-card.md-padding
-          img.md-card-image-alt(src='images/projects.png')
-          md-card-content.md-card-content
-            hr
-            h2 Recent Projects
-            p.
-              Come and check out my recent projects as well as all the source code for this amazing website!
-          div.navButton(layout='row', class='', layout-align='end end')
-            md-button.md-raised.md-primary.hvr-grow(ui-sref='projects') Projects
+  div.main-bg-color()
+    div.layout-content-container(layout-gt-lg='row' layout-align='center center' layout-margin)
+      div(flex class='main-card')
+        md-content.main-bg-color
+          md-card.md-padding
+            img.md-card-image-alt(src='images/resumeLogo.png')
+            md-card-content.md-card-content
+              hr
+              h2 Resume
+              p Take a look at the awesomeness that is my resume! A view and download link is available as well.
+            div.navButton(layout='row', class='', layout-align='end end')
+              md-button.md-raised.hvr-grow(ui-sref='resume') Resume
+      div(flex class='main-card')
+        md-content.main-bg-color
+          md-card.md-padding
+            img.md-card-image(src='images/contactImg.png')
+            md-card-content.md-card-content
+              hr
+              h2
+                | Stay In touch
+              p.
+                A short form requiring just your name and email address and a short message for me to contact you regarding whatever you wish.
+            div.navButton(layout='row', class='', layout-align='end end')
+              md-button.md-raised.md-primary.hvr-grow(ui-sref='contact') Contact
+      div(flex class='main-card')
+        md-content.main-bg-color
+          md-card.md-padding
+            img.md-card-image-alt(src='images/projects.png')
+            md-card-content.md-card-content
+              hr
+              h2 Recent Projects
+              p.
+                Come and check out my recent projects as well as all the source code for this amazing website!
+            div.navButton(layout='row', class='', layout-align='end end')
+              md-button.md-raised.md-primary.hvr-grow(ui-sref='projects') Projects

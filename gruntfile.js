@@ -15,7 +15,7 @@ module.exports = function(grunt){
                     noCache: true
                 },
                 files: {
-                    'public/dist/stylesheets/main.css': 'public/stylesheets/main.scss'
+                    'public/dist/stylesheets/main.css': 'public/stylesheets/mainStyles.sass'
 
                 }
             }

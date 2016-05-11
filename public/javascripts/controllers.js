@@ -20,7 +20,6 @@ module.controller('ProjectViewCtrl', ['$scope', 'Projects', '$stateParams', func
 
 module.controller('ContactCtrl', ['$scope', 'Contact', '$http', '$state', function ($scope, Contact, $http, $state) {
 
-
     $scope.contact = new Contact();
 
     $scope.saveContact = function(){
@@ -64,6 +63,18 @@ module.controller('ResumeCtrl', ['$scope', '$mdDialog', function ($scope, $mdDia
                 clickOutsideToClose: true
         })
     };
+
+}]);
+
+module.controller('TabCtrl', ['$scope', function ($scope) {
+
+    $scope.tabs = [
+      {Title: "Home", content: "This is the home tab"},
+      {Title: "About", content: "This is the About Tab"},
+      {Title: "Projects"},
+      {Title: "Blog"},
+      {Title: "Resume"},
+    ];
 
 }]);
 
