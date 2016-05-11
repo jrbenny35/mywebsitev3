@@ -63,7 +63,12 @@ myApp.factory('Contact', function($resource) {
 
 myApp.config(function ($mdThemingProvider) {
     $mdThemingProvider.theme('default')
-        .primaryPalette('blue')
-        .accentPalette('pink');
+        .primaryPalette('teal', {
+          'default': '300',
+          'hue-1': '400',
+          'hue-2': '800',
+          'hue-3': 'A100'
+        })
+        .accentPalette('blue');
 
 });

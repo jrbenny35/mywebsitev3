@@ -23,7 +23,7 @@ html, body
     max-width: 1200px
     margin: auto
 
-  .md-toolbar
+  //.md-toolbar
     min-width: 128px
     min-height: 220px
     background-image: url('/images/mylogo.png')
@@ -33,6 +33,9 @@ html, body
     //background-color: rgba(#000, .5)
     background-color: white
 
+  .md-toolbar
+    max-height: 64px
+
   h1
     color: #f50057
 
@@ -40,8 +43,9 @@ html, body
   max-height: 100vh
   min-height: 100vh
   width: 100%
-  overflow: scroll
+  overflow: auto
   padding-bottom: 5px
+
 
 .active, .active:focus, .active:hover
   background-color: #f50057 !important
@@ -171,9 +175,6 @@ hr
     margin-bottom: 2rem
     color: #ec407a
 
-#resume
-  padding: 2rem
-
   button
     margin-bottom: 3rem
 
@@ -205,6 +206,9 @@ hr
   line-height: 18px
 
 #about
+  max-width: 1200px
+  margin: auto
+
   .md-card-image
     margin: auto
     height: 200px
@@ -245,6 +249,15 @@ hr
     width: auto
     min-height: 200px
     max-height: 250px
+
+#footer
+  max-height: 200px
+  min-height: 150px
+  background-color: rgb(238, 238, 238)
+
+#resume
+  max-width: 1200px
+  margin: auto
 
 /** Colors **/
 
