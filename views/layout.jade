@@ -46,14 +46,32 @@ html
             md-list-item
               md-button.md-button(ui-sref='contact' flex='' ui-sref-active='active' ng-click='close()')
                 h3 Contact
+            md-list-item
+              md-button.md-button(ui-sref='blog' flex='' ui-sref-active='active' ng-click='close()')
+                h3 Blog
         div(flex='', layout='column', tabindex='-1', role='main')
           md-content#mainView(flex)
             md-toolbar(layout='row')
-              md-button#leftToggle(aria-label='Show Nav', ng-controller="LeftCtrl", ng-click='toggleSidenav()')
+              md-button#leftToggle(aria-label='Show Nav', ng-controller="LeftCtrl", ng-click='toggleSidenav()' hide-gt-md='')
                 md-icon(md-svg-icon='images/angular-material/menu.svg')
+              span(flex)
+              md-button.md-button(ui-sref='/' flex='' ng-click='close()')
+                h3 Home
+              md-button.md-button(ui-sref='about' flex='' ui-sref-active='active' ng-click='close()')
+                h3 About
+              md-button.md-button(ui-sref='projects' flex='' ui-sref-active='active' ng-click='close()')
+                h3 Projects
+              md-button.md-button(ui-sref='resume' flex='' ui-sref-active='active' ng-click='close()')
+                h3 Resume
+              md-button.md-button(ui-sref='contact' flex='' ui-sref-active='active' ng-click='close()')
+                h3 Contact
+              md-button.md-button(ui-sref='blog' flex='' ui-sref-active='active' ng-click='close()')
+                h3 Blog
+              span(flex)
             md-content(ui-view='')
             md-content#footer()
-                h1 This is a footer
+              div(style='margin: auto')
+                p This is a footer
         md-sidenav.md-sidenav-right.md-whiteframe-z2(md-component-id='right')
           md-toolbar.md-whiteframe-z1.body-toolbar.md-tall
             div(layout-align='center end' style='padding-top: 85px;' layout='row')

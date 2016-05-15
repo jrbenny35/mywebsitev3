@@ -1,21 +1,20 @@
 //
    Created by root on 9/17/15.
-
-h1 Current Projects
-hr
-p Check out what I'm up to!
-
-div#projects(layout-gt-lg='row' layout-align='center center' layout-margin )
-  div(flex class='main-card' ng-repeat='project in projects' )
-    md-content()
-      md-card().md-padding
-        img.md-card-image(src="{{ project.image }}")
-        md-card-content.md-card-content
-          hr
-          h2 {{ project.title }}
-          p {{ project.description }}
-        div.navButton(layout='row', class='', layout-align='end end')
-          md-button.md-raised.md-primary.hvr-grow(ui-sref='projectView({id:project._id})', role= "button") View
+div#projects()
+  h1 Current Projects
+  hr
+  p Check out what I'm up to!
+  div(layout-gt-lg='row' layout-align='center center' layout-margin)
+    div(flex class='main-card' ng-repeat='project in projects' )
+      md-content()
+        md-card().md-padding
+          img.md-card-image(src="{{ project.image }}")
+          md-card-content.md-card-content
+            hr
+            h2 {{ project.title }}
+            p {{ project.description }}
+          div.navButton(layout='row', class='', layout-align='end end')
+            md-button.md-raised.md-primary.hvr-grow(ui-sref='projectView({id:project._id})', role= "button") View
 
 
 //div#projects(layout-gt-md='row' flex layout-align='center center')
@@ -32,10 +31,3 @@ div#projects(layout-gt-lg='row' layout-align='center center' layout-margin )
           br
           div(layout='row' layout-align='start end')
             md-button.md-raised.md-primary.md-hue-2.hvr-grow(ui-sref='projectView({id:project._id})', role= "button") View
-
-
-
-
-
-
-
