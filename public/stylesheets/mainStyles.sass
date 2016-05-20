@@ -46,6 +46,9 @@ html, body
   overflow: auto
   padding-bottom: 5px
 
+.toolbar-text
+  color: white !important
+
 #main, #projects
   md-card
     -webkit-transition-duration: 0.3s
@@ -54,7 +57,7 @@ html, body
     transition-property: box-shadow
 
   md-card:hover
-    box-shadow: 0 5px 2px 1px rgba(0, 0, 0, 0.5)
+    box-shadow: 0px 15px 5px 5px rgba(0, 0, 0, 0.2)
 
 #main, #projects
   .md-card-image
@@ -62,8 +65,8 @@ html, body
 
 
   .md-card-content
-    min-height: 225px
-    max-height: 225px
+    //min-height: 225px
+    //max-height: 225px
 
 
   h2
@@ -74,14 +77,6 @@ html, body
     max-height: 450px
     overflow: hidden
     //max-width: 400px
-
-
-  //h1
-    color: white
-
-  md-card
-    min-height: 31rem
-    max-height: 31rem
 
   .md-card-image
     width: auto
@@ -138,13 +133,17 @@ hr
   //background-repeat: no-repeat
   //background-position: center
   //padding-bottom: 5rem
-  min-height: 400px
-  max-height: 800px
+  min-height: 450px
+  max-height: 600px
   padding: 50px
 
   .callout-content
     background-color: inherit
     width: 100%
+    overflow: hidden
+
+    h1
+      color: #ec407a
 
     p
       color: white
@@ -254,7 +253,8 @@ hr
 #footer
   max-height: 200px
   min-height: 150px
-  background-color: rgb(238, 238, 238)
+  color: white
+  background-color: rgb(33, 33, 33)
 
   div
     max-width: 1200px
@@ -265,10 +265,21 @@ hr
   max-width: 1200px
   margin: auto
 
-//.active, .active:focus, .active:hover
+.active, .active:focus, .active:hover
   background-color: #1976D2 !important
   color: white !important
 
+.hvr-underline-from-center:before
+  height: 25px !important
+
+
+.toolbar-active, .toolbar-active:focus, .toolbar-active:hover
+    border-bottom: 2px solid #1976D2
+
+.spacer
+  max-height: 100px
+  min-height: 200px
+  background-color: rgb(238, 238, 238)
 /** Colors **/
 
 .main-bg-color
