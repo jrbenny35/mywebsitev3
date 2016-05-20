@@ -5,8 +5,8 @@ div.container(style='margin-top: 25px;')
       hr
       form#blog( name='BlogForm' role='form' layout-padding)
         div(layout='row')
-          div(layout='column' style='width: 50%;')
-            md-input-container()
+          div(layout='column' flex-gt-md='50')
+            md-input-container(flex)
               label Blog title
               input( type='text' ng-maxlength='30' ng-minlength='3' md-maxlength='30' name='title' ng-model='blog.title' required)
               div(ng-messages='BlogForm.title.$error' ng-show='BlogForm.title.$touched')
@@ -33,11 +33,11 @@ div.container(style='margin-top: 25px;')
             div
               p Please input a blog date:
               md-datepicker(ng-model='blog.date' md-placeholder='Blog Date')
-          div(flex)
-            md-input-container(style='width: 100%;')
-              label What's on your mind?
-              textarea(type='text' ng-maxlength='1000' md-maxlength='2000' name='message' ng-model='blog.longPost' columns='1', rows='30')
-              div(ng-messages='BlogForm.message.$error' ng-show='BlogForm.message.$touched')
-                span(ng-message='maxlength') Message is limited to 1000 characters
-            br
-            md-button.md-raised.md-accent#submitBtn(type = "submit" ng-click='saveBlog()' ng-disabled='BlogForm.$invalid' style='margin-bottom: 1px;') Submit
+            div(flex-gt-md='50')
+              md-input-container(style='width: 100%;')
+                label What's on your mind?
+                textarea(type='text' ng-maxlength='1000' md-maxlength='2000' name='message' ng-model='blog.longPost' columns='1', rows='30' layout-padding)
+                div(ng-messages='BlogForm.message.$error' ng-show='BlogForm.message.$touched')
+                  span(ng-message='maxlength') Message is limited to 1000 characters
+              br
+              md-button.md-raised.md-accent#submitBtn(type = "submit" ng-click='saveBlog()' ng-disabled='BlogForm.$invalid' style='margin-bottom: 1px;') Submit

@@ -108,7 +108,7 @@ module.controller('BlogPostCtrl', ['$scope', 'Blog', '$state', function ($scope,
     $scope.blog.date = new Date();
     $scope.blog.tag = [];
 
-    $scope.blog.author = 'Benny Forehand';
+    $scope.blog.author = 'Ben Forehand Jr';
 
     $scope.addTag = function(){
         $scope.blog.tag.push($scope.blog.newTag);

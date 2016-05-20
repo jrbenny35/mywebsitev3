@@ -1,20 +1,21 @@
-div.container()
-  md-content(layout-padding)
+div.container(layout-padding)
+  md-content()
+    h1 Blog
+    hr
+    h5 Well I think this is self-explanatory...
     md-card(layout-padding ng-repeat='blog in posts')
       md-card-header
         md-card-header-text( layout-margin)
           span.md-headline Title: {{ blog.title }}
           span.md-subhead Date: {{ blog.date | amDateFormat: 'dddd, MMMM Do YYYY' }}
           span.md-subhead Written by {{ blog.author }}
-      div(layout='row' style='border-bottom: 1px solid #ba68c8;' layout-margin)
-        img(src='images/{{blog.image}}' style='width: auto; height: 325px;')
+      div(layout='row' style='border-bottom: 1px solid blue' layout-margin)
+        img(src='public/images/{{blog.image}}' style='width: auto; height: 325px;')
         md-card-content(layout='column')
           div(style='max-height: 300px; min-height: 200px;')
-            p.
-              Nulla in luctus mauris, in luctus diam. Vestibulum at sem vel nulla condimentum mollis. Etiam gravida nisl a risus mattis, quis dignissim ligula euismod. Pellentesque habitant morbi tristique senectus et netus et malesuada
-              fames ac turpis egestas. Aliquam mi felis, luctus vel efficitur ac, egestas et nunc. Pellentesque eget egestas ipsum. Sed porttitor tortor sed nisi vehicula volutpat. Fusce eleifend semper quam quis vehicula. Pellentesque sed
-              iaculis mauris. Sed et mattis nunc, vitae auctor arcu. {{ blog.shortPost }}
+            p {{ blog.longPost | limitTo:100 }}
           div(layout='row' layout-align='end end')
             md-button(ui-sref=' blogView({id:blog._id})' ng-click='viewPost()' role='button') Continue Reading
       div(layout='row' layout-margin )
-       md-button.md-raised(ng-repeat='tags in blog.tag' ui-sref='{{ blog.tag }}' role='button') {{ tags }}
+        p Tags: 
+        md-button.md-raised(ng-repeat='tags in blog.tag' ui-sref='{{ blog.tag }}' role='button') {{ tags }}

@@ -2,18 +2,18 @@ div(style='margin-top: 25px;').container
   md-content
     md-card(layout-padding)
       md-card-content
-        div(layout='row')
+        div(layout-get-md='row')
           h1(style='text-align: center;' flex) Admin Database Control
           md-button.md-button.md-primary(ui-sref='blogPost' style='margin: auto;') New Post
         hr
-        div(layout-margin layout='row' flex ng-repeat='blog in posts')
-          div(flex='25' style='border-bottom: 1px solid black')
+        div(layout-margin layout-get-md='row' flex ng-repeat='blog in posts')
+          div(flex-gt-md='25' style='border-bottom: 1px solid black')
             p Blog Title: {{ blog.title }}
-          div(flex='25' style='border-bottom: 1px solid black')
+          div(flex-gt-md='25' style='border-bottom: 1px solid black')
             p Written by: {{ blog.author }}
-          div(flex='25' style='border-bottom: 1px solid black')
+          div(flex-gt-md='25' style='border-bottom: 1px solid black')
             p Written on: {{ blog.date | amDateFormat: 'dddd, MMMM Do YYYY' }}
-          div(flex='25' layout='row' style='margin: auto;')
+          div(flex-gt-md='25' layout='row' style='margin: auto;')
             md-button.md-raised(ng-click='deletePost(blog._id)') Delete
             md-button.md-raised(ui-sref='blogEdit({id: blog._id})') Edit
             md-button.md-raised(ui-sref='blogView({id: blog._id})') View
