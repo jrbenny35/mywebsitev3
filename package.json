@@ -34,8 +34,8 @@
     "serve-favicon": "~2.3.0"
   },
   "devDependencies": {
-    "protractor": "^3.0.0",
-    "selenium-standalone": "^4.7.1",
-    "selenium-webdriver": "^2.47.0"
+    "protractor": "^3.3.0",
+    "selenium-standalone": "^4.9.1",
+    "selenium-webdriver": "^2.53.2"
   }
 }

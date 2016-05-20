@@ -28,6 +28,12 @@ module.controller('ContactCtrl', ['$scope', 'Contact', '$http', '$state', functi
             $state.go('contact-thankyou');
         });
     };
+
+    $scope.social = [
+      {name: 'Linked In', image: 'images/CBpFkPaz.png', link: 'http://linkedin.com/in/benjaminforehandjr'},
+      {name: 'Github', image: 'images/github-mark@1200x630.png', link: 'http://github.com/jrbenny35'},
+    ];
+
 }]);//End ContactCtrl
 
 module.controller('LeftCtrl', ['$scope', '$mdSidenav', function ($scope, $mdSidenav) {
