@@ -19,11 +19,14 @@
     "angular-route": "~1.4.7",
     "angular-resource": "~1.4.7",
     "angular-material": "master",
-    "angular-messages": "~1.4.7"
+    "angular-messages": "~1.4.7",
+    "moment": "^2.13.0",
+    "angular-moment": "^0.10.3"
   },
   "resolutions": {
     "angular": "1.4.10",
     "angular-animate": "^1.4.8",
-    "angular-aria": "^1.4.8"
+    "angular-aria": "^1.4.8",
+    "moment": ">=2.8.0 <2.11.0"
   }
 }

@@ -4,5 +4,6 @@
 
 module.exports = {
     projects: require('./projects.js'),
-    contact: require('./contact.js')
+    contact: require('./contact.js'),
+    blog: require('./blog.js')
 };
