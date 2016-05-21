@@ -2,11 +2,11 @@ div(style='margin-top: 25px;').container
   md-content
     md-card(layout-padding)
       md-card-content
-        div(layout-get-md='row')
+        div(layout-gt-md='row')
           h1(style='text-align: center;' flex) Admin Database Control
           md-button.md-button.md-primary(ui-sref='blogPost' style='margin: auto;') New Post
         hr
-        div(layout-margin layout-get-md='row' flex ng-repeat='blog in posts')
+        div(layout-margin layout-gt-md='row' flex ng-repeat='blog in posts')
           div(flex-gt-md='25' style='border-bottom: 1px solid black')
             p Blog Title: {{ blog.title }}
           div(flex-gt-md='25' style='border-bottom: 1px solid black')
