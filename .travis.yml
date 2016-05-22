@@ -33,4 +33,4 @@ deploy:
     secure: 29bce0f2-8df5-48c3-8448-c47c77c6cd7d
   app: bennyjrxyz
   on:
-    repo: jrbenny35/mywebsitev2
+    repo: jrbenny35/mywebsitev3
