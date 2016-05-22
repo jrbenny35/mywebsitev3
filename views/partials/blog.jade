@@ -1,0 +1,21 @@
+div.container(layout-padding)
+  md-content()
+    h1 Blog
+    hr
+    h5 Well I think this is self-explanatory...
+    md-card.md-padding(ng-repeat='blog in posts | reverse')
+      md-card-header
+        md-card-header-text()
+          span.md-headline {{ blog.title }}
+          span.md-subhead {{ blog.date | amDateFormat: 'dddd, MMMM Do YYYY' }}
+          span.md-subhead Written by {{ blog.author }}
+      div(layout='row' style='border-bottom: 1px solid blue')
+        img.hide-sm.hide-md(src='/images/{{blog.image}}' style='width: auto; height: 325px;')
+        md-card-content(layout='column')
+          div(style=' min-height: 200px;')
+            p(ng-bind-html='blog.longPost | limitTo: 700')
+          div(layout='row' layout-align='end end')
+            md-button(ui-sref=' blogView({id:blog._id})' ng-click='viewPost()' role='button') Continue Reading
+      div(layout='row' layout-margin )
+        p Tags:
+        md-button.md-raised(ng-repeat='tags in blog.tag' ui-sref='{{ blog.tag }}' role='button') {{ tags }}

@@ -7,11 +7,15 @@
 var myApp = angular.module('webApp', [
     'ui.router',
     'ngAnimate',
+    'ngSanitize',
     'controllers',
+    'filters',
+    'ui.tinymce',
     'ngResource',
     'ngMaterial',
     'ngMessages',
-    'ngMdIcons'
+    'ngMdIcons',
+    'angularMoment'
 
     ]);
 myApp.config(function ($stateProvider, $locationProvider) {
@@ -47,7 +51,33 @@ myApp.config(function ($stateProvider, $locationProvider) {
                 url: '/projects/:id/view',
                 templateUrl: 'partials/projectDetail',
                 controller: 'ProjectViewCtrl'
+            })
+            .state('blog', {
+                url: '/blog',
+                templateUrl: 'partials/blog',
+                controller: 'BlogCtrl'
+            })
+            .state('blogView',{
+                url: '/blog/:id/view',
+                templateUrl: 'partials/blogDetail',
+                controller: 'BlogViewCtrl'
+            })
+            .state('blogPost',{
+                url: '/blog_post',
+                templateUrl: 'partials/blogPost',
+                controller: 'BlogPostCtrl'
+            })
+            .state('blogEdit',{
+                url: '/blog/:id/edit',
+                templateUrl: 'partials/blogPost',
+                controller: 'BlogEditCtrl'
+            })
+            .state('admin',{
+                url: '/admin',
+                templateUrl: 'partials/adminLayout',
+                controller: 'AdminCtrl'
             });
+
 
         $locationProvider.html5Mode(true);
     });
@@ -61,9 +91,26 @@ myApp.factory('Contact', function($resource) {
     return $resource('/api/contact/:id', { id: '@_id' }); //full endpoint address
 });
 
+myApp.factory('Blog', function ($resource) {
+   return $resource('/api/blog/:id', {id: '@_id'}, {
+     update: { method: 'PUT', params: {id: '@id'} },
+   });
+});
+
+myApp.config(function ($mdDateLocaleProvider) {
+    $mdDateLocaleProvider.formatDate = function (date) {
+        return moment(date).format('LL');
+    };
+});
+
 myApp.config(function ($mdThemingProvider) {
     $mdThemingProvider.theme('default')
-        .primaryPalette('blue')
-        .accentPalette('pink');
+        .primaryPalette('teal', {
+          'default': '300',
+          'hue-1': '400',
+          'hue-2': '800',
+          'hue-3': 'A100'
+        })
+        .accentPalette('blue');
 
 });

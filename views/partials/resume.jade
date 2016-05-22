@@ -1,26 +1,25 @@
 //
    Created by root on 9/25/15.
-h1 Resume
-hr
-div(ng-controller='ResumeCtrl' layout-gt-md='row')
-  div(flex-gt-md='50' layout='column')
-    md-content
-      md-card.md-padding(style='min-height: 370px;')
-        md-card-content
-          p I have provided view and download links to my resume
-          br
-          br
-          p View
-          md-button.md-primary.md-raised.md-hue-2.hvr-grow(ng-click='showDialog($event)') My Resume
-          br
-          br
-          p Download on Google Drive
-          md-button.md-primary.md-raised.md-hue-2.hvr-grow(target="_blank" href="http://bit.ly/1LC94CF") Click Here
-          p To request my resume in a different format please
-            a(ui-sref='contact' style='text-decoration: none; color: #ec407a' )  Contact me
-  div(flex-gt-md='50')
-    md-content
-      md-card(style='min-height: 370px; max-height: 360;')
-        img(src='images/resumePage.jpg' alt='Pic of a Resume' style='margin: auto; width: auto;max-width: 350px;' flex)
-
-
+div#resume.md-padding(ng-controller='ResumeCtrl' )
+  h1 Resume
+  hr
+  div(layout-gt-md='row')
+    div(flex-gt-md='50' layout='column')
+      md-content
+        md-card.md-padding(style='min-height: 370px;')
+          md-card-content
+            p I have provided view and download links to my resume
+            br
+            br
+            p View
+            md-button.md-primary.md-raised.md-hue-2.hvr-grow(ng-click='showDialog($event)') My Resume
+            br
+            br
+            p Download on Google Drive
+            md-button.md-primary.md-raised.md-hue-2.hvr-grow(target="_blank" href="http://bit.ly/1LC94CF") Click Here
+            p To request my resume in a different format please
+              a(ui-sref='contact' style='text-decoration: none; color: #ec407a' )  Contact me
+    div(flex-gt-md='50')
+      md-content
+        md-card(style='min-height: 370px; max-height: 370;')
+          img(src='images/resumePage.jpg' alt='Pic of a Resume' style='margin: auto; max-width: 350px;' flex)

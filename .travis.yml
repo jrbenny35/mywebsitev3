@@ -32,7 +32,7 @@ before_script:
 - sh -e /etc/init.d/xvfb start
 - sleep 5
 script:
-  npm test
+  protractor tests/conf.js
 deploy:
   provider: heroku
   api_key:
