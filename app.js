@@ -9,7 +9,7 @@ var http = require('http');
 var mongoose = require('mongoose');
 //var _ = require('lodash');
 var mongoLocal = ("mongodb://localhost/MyMeanWebsite");
-var uri = process.env.MONGOLAB_URI;
+var uri = process.env.MONGODB_URI;
 
 var app = express();
 
