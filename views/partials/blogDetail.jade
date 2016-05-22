@@ -1,6 +1,6 @@
 div.container()
   md-content(layout-padding)
-    md-card(layout-wrap)
+    md-card()
       md-card-header
         md-card-header-text()
           span.md-headline {{ blog.title }}
@@ -8,7 +8,8 @@ div.container()
           span.md-subhead Written by {{ blog.author }}
       div(layout='row' style='border-bottom: 1px solid #ba68c8;')
         img.hide-sm.hide-md.md-padding(src='images/{{blog.image}}' style='width: auto; height: 325px;')
-        md-card-content(layout='column')
-          div(style='min-height: 200px;' ng-bind-html='blog.longPost' layout-wrap)
-      div(layout='row' layout-margin )
+        md-card-content(layout='column' layout-wrap)
+          div(style='min-height: 200px;' ng-bind-html='blog.longPost')
+      p Tags:
+      div(layout='row' layout-wrap)
         md-button.md-raised(ng-repeat='tags in blog.tag' ui-sref='{{ blog.tag }}' role='button') {{ tags }}
