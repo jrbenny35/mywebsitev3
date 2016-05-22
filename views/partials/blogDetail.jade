@@ -7,8 +7,8 @@ div.container()
           span.md-subhead {{ blog.date | amDateFormat: 'dddd, MMMM Do YYYY' }}
           span.md-subhead Written by {{ blog.author }}
       div(layout='row' style='border-bottom: 1px solid #ba68c8;')
-        img.hide-sm.hide-md(src='images/{{blog.image}}' style='width: auto; height: 325px;')
+        img.hide-sm.hide-md.md-padding(src='images/{{blog.image}}' style='width: auto; height: 325px;')
         md-card-content(layout='column')
-          div(style='min-height: 200px;' ng-bind-html='blog.longPost')
+          div(style='min-height: 200px;' ng-bind-html='blog.longPost' layout-wrap)
       div(layout='row' layout-margin )
         md-button.md-raised(ng-repeat='tags in blog.tag' ui-sref='{{ blog.tag }}' role='button') {{ tags }}
