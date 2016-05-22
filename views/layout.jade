@@ -15,21 +15,20 @@ html
     link(rel='stylesheet', href='/javascripts/vendor/jquery.kyco.googleplusfeed2/dist/jquery.kyco.googleplusfeed2.css')
     link(rel='stylesheet', href='/dist/stylesheets/main.min.css')
     base(href="/")
-  body(ng-app='webApp', layout="column")
-    md-toolbar.md-whiteframe-z2(style='max-height: 15px;' layout='row')
-      md-button#leftToggle(hide-gt-lg='', aria-label='Show Nav', ng-controller="LeftCtrl", ng-click='toggleSidenav()')
-        md-icon(md-svg-icon='images/angular-material/menu.svg')
+  body.ng-cloak(ng-app='webApp', layout="column")
+    md-toolbar.md-whiteframe-z2(style='max-height: 15px;' layout='row' hide-gt-md)
+      md-button#leftToggle(aria-label='Show Nav', ng-controller="LeftCtrl", ng-click='toggleSidenav()' style='padding-top: 10px')
+        ng-md-icon(icon="menu" style="fill: white;" size="30" hide-gt-lg='')
       span(flex='')
-      h2(hide-gt-sm='') Benny Jr
       span(flex='')
       md-button(aria-label='Show User List', ng-controller='RightNavCtrl', ng-click='toggleSidenav()' style='padding-top: 10px')
         ng-md-icon(icon="people" style="fill: white" size="30" hide-gt-lg='')
     div(layout='row' )
-      md-toolbar.md-tall.md-whiteframe-z1(style='max-width: 150px;' hide-sm='' hide-md='' hide-lg='')
       div#layout(layout='row' flex)
-        md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id='left', md-is-locked-open="$mdMedia('gt-md')" layout='column')
-          md-toolbar.md-whiteframe-z1.body-toolbar.md-toolbar
-            span(flex='')
+        md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id='left', layout='column')
+          md-toolbar.md-whiteframe-z1.md-toolbar
+            h3(style='margin: auto;') Menu
+            //span(flex='')
           md-list(ng-controller="LeftCtrl")
             md-list-item
               md-button.md-button(ui-sref='/' flex='' ui-sref-active='active' ng-click='close()')
@@ -46,8 +45,30 @@ html
             md-list-item
               md-button.md-button(ui-sref='contact' flex='' ui-sref-active='active' ng-click='close()')
                 h3 Contact
-        div.md-whiteframe-z2(flex='', layout='column', tabindex='-1', role='main')
-          md-content.md-padding#mainView(ui-view='' flex)
+            md-list-item
+              md-button.md-button(ui-sref='blog' flex='' ui-sref-active='active' ng-click='close()')
+                h3 Blog
+        div(flex='', layout='column', tabindex='-1', role='main')
+          md-content#mainView(flex)
+            md-toolbar(layout='row' hide-md hide-sm)
+              span(flex)
+              md-button.md-button.toolbar-text.hvr-underline-from-center(ui-sref='/' flex='' ng-click='close()')
+                h3 Home
+              md-button.md-button.hvr-underline-from-center(ui-sref='about' ui-sref-active='' flex='' ng-click='close()')
+                h3.toolbar-text About
+              md-button.md-button.hvr-underline-from-center(ui-sref='projects' ui-sref-active='' flex='' ng-click='close()')
+                h3.toolbar-text Projects
+              md-button.md-button.hvr-underline-from-center(ui-sref='resume' flex='' ng-click='close()')
+                h3.toolbar-text Resume
+              md-button.md-button.hvr-underline-from-center(ui-sref='contact' flex='' ng-click='close()')
+                h3.toolbar-text Contact
+              md-button.md-button.hvr-underline-from-center(ui-sref='blog' flex='' ng-click='close()')
+                h3.toolbar-text Blog
+              span(flex)
+            md-content(ui-view='')
+            md-content#footer(layout-padding)
+              div(style='margin: auto')
+                p Designed and Built by Benjamin Forehand Jr
         md-sidenav.md-sidenav-right.md-whiteframe-z2(md-component-id='right')
           md-toolbar.md-whiteframe-z1.body-toolbar.md-tall
             div(layout-align='center end' style='padding-top: 85px;' layout='row')
@@ -63,11 +84,12 @@ html
                 md-content.md-padding
                   p Google Plus
                   .gplus2
-      md-toolbar.md-tall.md-whiteframe-z1(style='max-width: 150px;' hide-sm='' hide-md='' hide-lg='')
 
 
     script(type="text/javascript" src='https://code.jquery.com/jquery-2.1.4.min.js')
+    script(type="text/javascript" src='/javascripts/vendor/tinymce-dist/tinymce.min.js')
     script(type="text/javascript" src='/javascripts/vendor/angular/angular.js')
+    script(type="text/javascript" src='/javascripts/vendor/angular-sanitize/angular-sanitize.min.js')
     script(type='text/javascript' src='/javascripts/vendor/angular-messages/angular-messages.min.js')
     script(type="text/javascript" src='/javascripts/vendor/angular-resource/angular-resource.js')
     script(type="text/javascript" src='/javascripts/vendor/angular-animate/angular-animate.min.js')
@@ -77,6 +99,9 @@ html
     script(type="text/javascript" src='/javascripts/vendor/angular-ui-router/release/angular-ui-router.min.js')
     script(type="text/javascript" src='/javascripts/vendor/jquery.kyco.googleplusfeed2/dist/jquery.kyco.googleplusfeed2.min.js')
     script(type="text/javascript" src='/javascripts/vendor/viewerjs/ViewerJS/pdf.js')
+    script(type="text/javascript" src='/javascripts/vendor/moment/moment.js')
+    script(type="text/javascript" src='/javascripts/vendor/angular-moment/angular-moment.min.js')
+    script(type="text/javascript" src='/javascripts/vendor/angular-ui-tinymce/dist/tinymce.min.js')
     script(type="text/javascript" src='/dist/javascripts/indexFinal.min.js')
 
     script.

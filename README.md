@@ -1,16 +1,16 @@
-# Because Version 1 was nothing compared to this
+# Because Version 2 was a weak attempt!
 
 [![Build Status](https://travis-ci.org/jrbenny35/mywebsitev2.svg?branch=master)](https://travis-ci.org/jrbenny35/mywebsitev2)
 
-This is an implementation of my previous website, now using the MEAN stack!
+This is an improvement visually mainly of my website still using the MEAN stack!
 
 The idea for this website is to accomplish these goals:
-- Establish a Web Presence 
+- Establish a Web Presence
 - Showcase current work and skills
 - Allow for another form of contact
 
 #### Version
-2.0
+3.0
 
 #### Links
 * [Homepage](http://bennyjr.xyz): My masterpiece!
@@ -20,7 +20,7 @@ The idea for this website is to accomplish these goals:
 * [Node.js](http://www.nodejs.org): Powerful, server-side JavaScript.
 * [MongoDB](http://www.mongodb.org): Non-Sql, JSON like structure, that is fast and easy to use.
 * [Mongoose](http://www.mongoosejs.com): A nice bit of middleware between MongoDB and NodeJS
-* [AngularJS](http://www.angularjs.org): Google's frontend frame work. MVC, powerful, and really just AWESOME. 
+* [AngularJS](http://www.angularjs.org): Google's frontend frame work. MVC, powerful, and really just AWESOME.
 * [Express](http://www.expressjs.com): A nice framework for node. Helps keep things pretty and is easy to use
 * [jQuery](http://www.jquery.com): Well I think JQuery can speak for itself...
 * [Jade](http://www.jade-lang.com): Who like to write HTML with ending tags anyways?

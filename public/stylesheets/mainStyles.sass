@@ -1,0 +1,296 @@
+@import "angularMaterialStyles"
+@import "fonts"
+
+.browsehappy
+  margin: 0.2em 0
+  background: #ccc
+  color: #000
+  padding: 0.2em 0
+
+ng\:cloak, ng-cloak, data-ng-cloak, x-ng-cloak, .ng-cloak, .x-ng-cloak
+  display: none !important
+
+html, body
+  font-size: 21px
+  position: fixed
+  width: 100%
+  font-family: $font-main
+
+#layout
+  margin: auto
+
+  .layout-content-container
+    padding-top: 50px
+    padding-bottom: 50px
+    max-width: 1200px
+    margin: auto
+
+  //.md-toolbar
+    min-width: 128px
+    min-height: 220px
+    background-image: url('/images/mylogo.png')
+    background-position: center
+    background-size: contain
+    background-repeat: no-repeat
+    //background-color: rgba(#000, .5)
+    background-color: white
+
+  .md-toolbar
+    max-height: 64px
+
+  h1
+    color: #f50057
+
+#mainView
+  max-height: 100vh
+  min-height: 100vh
+  width: 100%
+  overflow: auto
+  padding-bottom: 5px
+
+.toolbar-text
+  color: white !important
+  font-family: $font-header !important
+
+#main, #projects
+  md-card
+    -webkit-transition-duration: 0.3s
+    transition-duration: 0.3s
+    -webkit-transition-property: box-shadow
+    transition-property: box-shadow
+
+  md-card:hover
+    box-shadow: 0px 15px 5px 5px rgba(0, 0, 0, 0.2)
+
+#main, #projects
+  .md-card-image
+    margin: auto
+
+
+  .md-card-content
+    //min-height: 225px
+    //max-height: 225px
+
+
+  h2
+    text-align: center
+
+
+  md-card
+    max-height: 450px
+    overflow: hidden
+    //max-width: 400px
+
+  .md-card-image
+    width: auto
+    height: 225px
+    margin: auto
+
+  .md-card-image-alt
+    height: 225px
+    max-width: 375px
+    margin: auto
+
+
+#bodyContainer
+  background-color: white
+  margin: 2rem
+  overflow: auto
+
+hr
+  border-bottom: 1px solid #00bcd4 !important //material-teal-50
+
+#inTouch
+  text-align: center
+  padding-top: 7rem
+
+#siteContents
+  text-align: left
+
+  h2
+    text-align: center
+
+
+  h4
+    border-left: 2px solid #ec407a
+    padding-left: 5px
+
+/* ------------------------    Nav    -------------------- */
+
+#mainTitle
+  //border: 1px solid black
+  text-align: center
+  margin-bottom: 5px
+  background-color: #688897
+
+
+#view
+  //padding: 3rem
+  //padding-right: 3rem
+  //background-color: white
+
+#bigCallout
+  text-align: center
+  //background-image: url("/images/snow-bench-man-person.jpeg")
+  //background-size: cover
+  //background-repeat: no-repeat
+  //background-position: center
+  //padding-bottom: 5rem
+  min-height: 450px
+  max-height: 600px
+  padding: 50px
+
+  .callout-content
+    background-color: inherit
+    width: 100%
+    overflow: hidden
+
+    h1
+      color: #ec407a
+
+    p
+      color: white
+      font-size: 25px
+
+
+    img
+      height: 400px
+      width: 350px
+      background-color: transparent
+
+
+#table
+  padding: 1rem
+
+.link
+  text-decoration: none
+  color: black
+
+#bio
+  h1
+    text-align: center
+    margin-bottom: 2rem
+    color: #ec407a
+
+  button
+    margin-bottom: 3rem
+
+  h1
+    color: #ec407a
+
+#contact
+  max-width: 1200px
+  margin: auto
+
+  h1
+    color: #ec407a
+
+#my-dialog
+  h3
+    color: #ec407a
+
+
+#socialMediaLinks
+  background-color: white
+
+/* ---------- Google Plus Feed ---------- */
+
+.kyco_googleplusfeed
+  width: auto
+  border: 1px solid #d8d8d8
+  border-bottom-width: 2px
+  border-radius: 3px
+  color: #404040
+  font-family: arial, sans-serif
+  font-size: 13px
+  line-height: 18px
+
+#about
+  max-width: 1200px
+  margin: auto
+
+  .md-card-image
+    margin: auto
+    height: 200px
+    width: auto
+
+#projects
+  max-width: 1200px
+  margin: auto
+
+  .md-card-image
+    margin: auto
+    width: auto
+    max-width: 350px
+
+
+  md-card
+    width: auto
+
+    p
+      //width: 100%;
+
+
+.md-sidenav-right
+  width: 350px !important
+  min-width: 350px !important
+
+
+
+.kyco_googleplusfeed .feed_profile_image
+  width: 75px !important
+  height: 75px !important
+
+
+.projects-detail-card
+  h2
+    color: #ec407a
+
+
+  img
+    margin: auto
+    width: auto
+    min-height: 200px
+    max-height: 250px
+
+#footer
+  max-height: 200px
+  min-height: 150px
+  color: white
+  background-color: rgb(33, 33, 33)
+
+  div
+    max-width: 1200px
+    margin: auto
+    text-align: center
+
+#resume
+  max-width: 1200px
+  margin: auto
+
+.active, .active:focus, .active:hover
+  background-color: #ec407a !important
+  color: white !important
+
+.hvr-underline-from-center:before
+  height: 5px !important
+
+
+.spacer
+  max-height: 150px
+  min-height: 100px
+  background-color: rgb(238, 238, 238)
+
+.container
+  max-width: 1200px
+  margin: auto
+/** Colors **/
+
+.main-bg-color
+  background-color: #1976D2
+
+.teal
+  background-color: #4db6ac
+
+.red
+  background-color: #ec407a

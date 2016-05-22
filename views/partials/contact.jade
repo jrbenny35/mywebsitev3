@@ -1,10 +1,10 @@
 //
    Created by root on 9/23/15.
-div#contact
+div#contact.md-padding.container()
   h1 Contact me
   hr
   h3 Please fill out this contact form below
-  form( name='contactForm' ng-controller="ContactCtrl", role="form" ng-submit="saveContact()")
+  form( name='contactForm', role="form" ng-submit="saveContact()")
     md-content
       md-card.md-padding
         md-card-content()
@@ -29,21 +29,13 @@ div#contact
             div(ng-messages='contactForm.message.$error' ng-show='contactForm.message.$touched')
               p(ng-message='maxlength') Message is limited to 300 characters
           br
-          md-button.md-raised.md-primary.md-hue-2.hvr-grow(type = "submit" ng-disabled='contactForm.$invalid') Submit
+          md-button.md-raised.md-primary.hvr-grow(type = "submit" ng-disabled='contactForm.$invalid') Submit
   br
   h1 Reach out to me here if you wish
   hr
-  md-content
-    div(layout-gt-lg='row' layout='column' layout-align-gt-lg='center center' layout-align='center center' layout-margin)
-      div()
-        md-content
-          md-card(style='max-width: 325px; min-width: 325px;').md-padding.md-card-secondary
-            a(href="http://linkedin.com/in/benjaminforehandjr", target="_blank")
-              img(src="images/CBpFkPaz.png", alt="linked in" style='max-height: 150px; width: auto; margin: auto;')
-            p Linked In
-      div()
-        md-content
-          md-card(style='max-width: 325px; min-width: 325px;').md-padding.md-card-secondary
-            a(href="http://github.com/jrbenny35", target="_blank")
-              img(src="images/github-mark@1200x630.png", alt="github img" style='max-height: 150px; width: auto; margin: auto;')
-            p Github
+  div.container(layout='row' layout-align='center center' layout-margin layout-wrap )
+    div(ng-repeat='media in social')
+      md-card( style='max-width: 325px; min-width: 325px;').md-padding.md-card-secondary
+        a(href= "{{ media.link }}", target="_blank")
+          img(src="{{ media.image }}", style='max-height: 150px; width: auto; margin: auto;')
+        p {{ media.name }}
