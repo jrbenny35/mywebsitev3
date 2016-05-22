@@ -57,7 +57,30 @@ module.exports = function(grunt){
                 ],
                 dest:'public/dist/javascripts/indexFinal.js'
             }
-        }
+        },
+
+        protractor: {
+            options: {
+              // Location of your protractor config file
+              configFile: "tests/conf.js",
+
+              // Do you want the output to use fun colors?
+              noColor: false,
+
+              args: { }
+            },
+            e2e: {
+              options: {
+                // Stops Grunt process if a test fails
+                keepAlive: false
+              }
+            },
+            continuous: {
+              options: {
+                keepAlive: true
+              }
+            }
+        },
 
 
     });
@@ -68,10 +91,12 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-protractor-runner');
 
     //Grunt tasks
     grunt.registerTask('build',['sass', 'cssmin', 'concat', 'uglify']);
     grunt.registerTask('default',['build']);
+    grunt.registerTask('test',['protractor:e2e']);
 
 
 };

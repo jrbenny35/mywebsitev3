@@ -21,7 +21,7 @@ var blogSchema = new Schema({
     },
     longPost:{
         type: String,
-        required: true
+        required: false
     },
     author:{
         type: String,

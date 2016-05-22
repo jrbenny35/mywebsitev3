@@ -15,7 +15,7 @@ html
     link(rel='stylesheet', href='/javascripts/vendor/jquery.kyco.googleplusfeed2/dist/jquery.kyco.googleplusfeed2.css')
     link(rel='stylesheet', href='/dist/stylesheets/main.min.css')
     base(href="/")
-  body(ng-app='webApp', layout="column")
+  body.ng-cloak(ng-app='webApp', layout="column")
     md-toolbar.md-whiteframe-z2(style='max-height: 15px;' layout='row' hide-gt-md)
       md-button#leftToggle(aria-label='Show Nav', ng-controller="LeftCtrl", ng-click='toggleSidenav()' style='padding-top: 10px')
         ng-md-icon(icon="menu" style="fill: white;" size="30" hide-gt-lg='')

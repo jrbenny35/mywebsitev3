@@ -6,7 +6,7 @@ div(style='margin-top: 25px;').container
           h1(style='text-align: center;' flex) Admin Database Control
           md-button.md-button.md-primary(ui-sref='blogPost' style='margin: auto;') New Post
         hr
-        div(layout-margin layout-gt-md='row' flex ng-repeat='blog in posts')
+        div(layout-margin layout-gt-md='row' flex ng-repeat='blog in posts | reverse')
           div(flex-gt-md='25' style='border-bottom: 1px solid black')
             p Blog Title: {{ blog.title }}
           div(flex-gt-md='25' style='border-bottom: 1px solid black')
