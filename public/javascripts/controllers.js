@@ -128,6 +128,17 @@ module.controller('BlogPostCtrl', ['$scope', 'Blog', '$state', function ($scope,
         });
     };
 
+    $scope.tinyMce = {
+      onChange: function(e) {
+        // put logic here for keypress and cut/paste changes
+      },
+      inline: false,
+      plugins : 'advlist autolink link image lists charmap print preview',
+      skin: 'lightgray',
+      theme : 'modern',
+      height: 500
+    };
+
 }]);
 
 module.controller('BlogEditCtrl', ['$scope', 'Blog', '$state', '$stateParams', function ($scope, Blog, $state, $stateParams) {
@@ -149,6 +160,16 @@ module.controller('BlogEditCtrl', ['$scope', 'Blog', '$state', '$stateParams', f
       });
   };
 
+  $scope.tinyMce = {
+    onChange: function(e) {
+      // put logic here for keypress and cut/paste changes
+    },
+    inline: false,
+    plugins : 'advlist autolink link image lists charmap print preview',
+    skin: 'lightgray',
+    theme : 'modern',
+    height: 500
+  };
 }]);
 
 module.controller('AdminCtrl', ['$scope', 'Blog', '$state', '$stateParams', function ($scope, Blog, $state, $stateParams) {

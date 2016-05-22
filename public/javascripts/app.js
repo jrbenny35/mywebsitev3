@@ -7,7 +7,10 @@
 var myApp = angular.module('webApp', [
     'ui.router',
     'ngAnimate',
+    'ngSanitize',
     'controllers',
+    'filters',
+    'ui.tinymce',
     'ngResource',
     'ngMaterial',
     'ngMessages',

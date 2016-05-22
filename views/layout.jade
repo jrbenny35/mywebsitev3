@@ -17,8 +17,8 @@ html
     base(href="/")
   body(ng-app='webApp', layout="column")
     md-toolbar.md-whiteframe-z2(style='max-height: 15px;' layout='row' hide-gt-md)
-      md-button#leftToggle(aria-label='Show Nav', ng-controller="LeftCtrl", ng-click='toggleSidenav()')
-        md-icon(md-svg-icon='images/angular-material/menu.svg')
+      md-button#leftToggle(aria-label='Show Nav', ng-controller="LeftCtrl", ng-click='toggleSidenav()' style='padding-top: 10px')
+        ng-md-icon(icon="menu" style="fill: white;" size="30" hide-gt-lg='')
       span(flex='')
       span(flex='')
       md-button(aria-label='Show User List', ng-controller='RightNavCtrl', ng-click='toggleSidenav()' style='padding-top: 10px')
@@ -27,7 +27,7 @@ html
       div#layout(layout='row' flex)
         md-sidenav.md-sidenav-left.md-whiteframe-z2(md-component-id='left', layout='column')
           md-toolbar.md-whiteframe-z1.md-toolbar
-            h3(style='margin: auto;') Logo Here
+            h3(style='margin: auto;') Menu
             //span(flex='')
           md-list(ng-controller="LeftCtrl")
             md-list-item
@@ -51,8 +51,6 @@ html
         div(flex='', layout='column', tabindex='-1', role='main')
           md-content#mainView(flex)
             md-toolbar(layout='row' hide-md hide-sm)
-              md-button.md-button#leftToggle(aria-label='Show Nav', ng-controller="LeftCtrl", ng-click='toggleSidenav()' hide-gt-md='')
-                md-icon(md-svg-icon='images/angular-material/menu.svg')
               span(flex)
               md-button.md-button.toolbar-text.hvr-underline-from-center(ui-sref='/' flex='' ng-click='close()')
                 h3 Home
@@ -89,7 +87,9 @@ html
 
 
     script(type="text/javascript" src='https://code.jquery.com/jquery-2.1.4.min.js')
+    script(type="text/javascript" src='/javascripts/vendor/tinymce-dist/tinymce.min.js')
     script(type="text/javascript" src='/javascripts/vendor/angular/angular.js')
+    script(type="text/javascript" src='/javascripts/vendor/angular-sanitize/angular-sanitize.min.js')
     script(type='text/javascript' src='/javascripts/vendor/angular-messages/angular-messages.min.js')
     script(type="text/javascript" src='/javascripts/vendor/angular-resource/angular-resource.js')
     script(type="text/javascript" src='/javascripts/vendor/angular-animate/angular-animate.min.js')
@@ -101,6 +101,7 @@ html
     script(type="text/javascript" src='/javascripts/vendor/viewerjs/ViewerJS/pdf.js')
     script(type="text/javascript" src='/javascripts/vendor/moment/moment.js')
     script(type="text/javascript" src='/javascripts/vendor/angular-moment/angular-moment.min.js')
+    script(type="text/javascript" src='/javascripts/vendor/angular-ui-tinymce/dist/tinymce.min.js')
     script(type="text/javascript" src='/dist/javascripts/indexFinal.min.js')
 
     script.
