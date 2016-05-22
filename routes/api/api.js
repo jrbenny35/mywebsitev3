@@ -6,7 +6,7 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 var nodemailer = require('nodemailer');
-var sendgrid  = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD, process.env.SENDGRID_APIKEY);
+var sendgrid  = require('sendgrid')(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
 
 
 
