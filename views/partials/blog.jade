@@ -9,7 +9,7 @@ div.container(layout-padding)
           span.md-headline {{ blog.title }}
           span.md-subhead {{ blog.date | amDateFormat: 'dddd, MMMM Do YYYY' }}
           span.md-subhead Written by {{ blog.author }}
-      div(layout='row' style='border-bottom: 1px solid blue')
+      div.md-padding(layout='row' style='border-bottom: 1px solid blue')
         img.hide-sm.hide-md(src='/images/{{blog.image}}' style='width: auto; height: 325px;')
         md-card-content(layout='column')
           div(style=' min-height: 200px;')
