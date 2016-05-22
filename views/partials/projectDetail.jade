@@ -1,4 +1,4 @@
-div(flex class='projects-detail-card' layout-padding)
+div(flex class='projects-detail-card' layout-padding style='max-width: 1500px')
   h2 Project: {{ projects.title }}
   md-content.md-padding
     md-card.md-card
@@ -15,4 +15,4 @@ div(flex class='projects-detail-card' layout-padding)
           span Updated on: {{ projects.updated_On }}
         br
         div(layout='row' layout-align='start end')
-          md-button.md-raised.md-primary.md-hue-2.hvr-grow(href="{{ projects.link }}", role= "button" target="_blank") View
+          md-button.md-raised.md-primary.hvr-grow(href="{{ projects.link }}", role= "button" target="_blank") View
