@@ -11,5 +11,5 @@ div.container()
         md-card-content(layout='column' layout-wrap)
           div(style='min-height: 200px;' ng-bind-html='blog.longPost')
       p Tags:
-      div(layout='row' layout-wrap style='margin: auto;')
+      div(layout='row' layout-wrap)
         md-button.md-raised(ng-repeat='tags in blog.tag' ui-sref='{{ blog.tag }}' role='button') {{ tags }}
