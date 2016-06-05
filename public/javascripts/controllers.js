@@ -32,6 +32,8 @@ module.controller('ContactCtrl', ['$scope', 'Contact', '$http', '$state', functi
     $scope.social = [
       {name: 'Linked In', image: 'images/CBpFkPaz.png', link: 'http://linkedin.com/in/benjaminforehandjr'},
       {name: 'Github', image: 'images/github-mark@1200x630.png', link: 'http://github.com/jrbenny35'},
+      {name: 'Twitter', image: 'images/twitterimage.png', link: 'https://twitter.com/bigbenjr135'},
+      {name: 'Google+', image: 'images/googleplus.jpeg', link: 'https://plus.google.com/+BenjaminForehandJr'},
     ];
 
 }]);//End ContactCtrl
