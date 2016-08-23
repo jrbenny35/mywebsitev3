@@ -1,5 +1,4 @@
-//
-   Created by root on 9/17/15.
+// Created by jrbenny35 on 9/17/15.
 div#projects.md-padding()
   h1 Current Projects
   hr
@@ -15,3 +14,17 @@ div#projects.md-padding()
             p {{ project.description }}
           div.navButton(layout='row', class='', layout-align='end end')
             md-button.md-raised.md-primary.hvr-grow(ui-sref='projectView({id:project._id})', role= "button") View
+  h1 Open Source Contributions
+  hr
+  p My Open Source contributions and their current states
+  div(layout-gt-lg='row' layout-align='center center' layout-margin layout-wrap)
+    div(class='main-card')
+      md-content()
+        md-card().md-padding
+          img.md-card-image(src="images/firefox_logo.png" style='max-height: 150px; width: auto; margin: auto;')
+          md-card-content.md-card-content
+            hr
+            h2 Mozilla Open Source
+            p The makers of Firefox browser has some great Open Source contribution opportunities!
+          div.navButton(layout='row', layout-align='end end')
+            md-button.md-raised.md-primary.hvr-grow(ui-sref='mozilla', role= "button") View
