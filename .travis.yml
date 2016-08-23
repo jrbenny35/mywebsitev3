@@ -15,8 +15,9 @@ before_install:
 install:
 - npm install
 - bower install
-- ./node_modules/protractor/bin/webdriver-manager update --standalone
-- ./node_modules/protractor/bin/webdriver-manager start --standalone &
+- npm install -g protractor
+- webdriver-manager update
+- webdriver-manager start
 before_script:
 - npm install grunt-cli -g
 - grunt
