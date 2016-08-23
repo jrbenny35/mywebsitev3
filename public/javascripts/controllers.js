@@ -185,3 +185,18 @@ module.controller('AdminCtrl', ['$scope', 'Blog', '$state', '$stateParams', func
   };
 
 }]);
+
+module.controller('MozillaCtrl', ['$scope', '$http', function($scope, $http){
+
+    $scope.loading = true;
+    $http.get('https://bugzilla.mozilla.org/rest/bug?assigned_to=bforehand@mozilla.com')
+        .success(function (data){
+            $scope.bugs = data.bugs;
+        })
+        .error(function (data, status, headers, config) {
+            $scope.errorMsg = "Couldn't load bugs. # " + status;
+        })
+        .finally(function (){
+            $scope.loading = false;
+        });
+}]);

@@ -47,6 +47,11 @@ myApp.config(function ($stateProvider, $locationProvider) {
                 url: '/resume',
                 templateUrl: 'partials/resume'
             })
+            .state('mozilla',{
+                url: '/mozilla',
+                templateUrl: 'partials/mozilla_partial',
+                controller: 'MozillaCtrl'
+            })
             .state('projectView',{
                 url: '/projects/:id/view',
                 templateUrl: 'partials/projectDetail',
@@ -112,5 +117,9 @@ myApp.config(function ($mdThemingProvider) {
           'hue-3': 'A100'
         })
         .accentPalette('blue');
-
 });
+
+myApp.config(['$httpProvider', function ($httpProvider) {
+    $httpProvider.defaults.useXDomain = true;
+    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+}]);
