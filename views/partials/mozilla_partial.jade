@@ -1,6 +1,6 @@
-div#mozilla(layout-wrap layout-gt-lg='row' layout-align='center center')
-  div(ng-show="loading")
-    img(src="images/ring.gif")
+div#mozilla(layout-gt-lg='row' layout-align='center center' layout-padding)
+  div(ng-show="loading" style='margin:auto; max-width:150px;' )
+    img(src="images/ring.gif" style='max-width:150px; margin:auto;')
     p Loading Bugs...
   div(ng-repeat='bug in bugs' class='projects-detail-card' style='max-width:400px; min-width:400px;' layout-wrap)
     md-content.md-padding
